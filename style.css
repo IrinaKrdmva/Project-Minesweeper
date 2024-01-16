@@ -44,6 +44,11 @@ h1 {
     outline: 1px solid black;
 }
 
+.cell-bomb {
+    background-image: url('./images/bomb.png');
+    background-size: contain;
+}
+
 .end-game-screen {
     position: absolute;
     top: 0;
@@ -90,10 +95,4 @@ h1 {
 .cell-clicked {
     background-color: rgb(157, 197, 199);
     cursor: not-allowed;
-}
-
-.cell-bomb {
-    background-image: url('./images/bomb.png');
-    background-size: contain;
-    background-position: center;
 }
