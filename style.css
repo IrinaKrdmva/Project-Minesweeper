@@ -93,6 +93,6 @@ h1 {
 }
 
 .cell-clicked {
-    background-color: rgb(157, 197, 199);
+    background-color: rgb(4, 76, 80);
     cursor: not-allowed;
 }
