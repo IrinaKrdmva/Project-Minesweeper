@@ -1,3 +1,17 @@
+/*
+  black: rgb(0, 23, 50); #001732;
+  orange: rgb(241, 117, 78); #f1754e;
+  bg-color: rgb(216, 238, 232);  #d8eee8;
+  bg-dark-color: rgb(203, 224, 221); #cbe0dd;
+  clicked-cell: rgb(157, 197, 199); #9dc5c7;
+  transparent red: rgba(241, 117, 78, 0.7);
+
+	font-family: 'Darker Grotesque', sans-serif;
+	font-family: 'Press Start 2P', cursive;
+*/
+
+/* # Generic */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +27,10 @@ body {
 }
 
 .game-container {
-    width: 484px;
+    width: calc(480px + 4px);
 }
+
+/* # Game Panel */
 
 h1 {
     font-size: 40px;
@@ -24,7 +40,10 @@ h1 {
     display: flex;
     justify-content: space-between;
     font-size: 32px;
+    /* font-weight: 700; */
 }
+
+/* # Game Grid */
 
 .game-board {
     border: 2px solid rgb(0, 23, 50);
@@ -32,7 +51,7 @@ h1 {
 }
 
 .grid {
-    height: 484px;
+    height: calc((48px * 10) + 4px);
     display: flex;
     flex-wrap: wrap;
 }
@@ -41,13 +60,24 @@ h1 {
     width: 48px;
     height: 48px;
     cursor: pointer;
-    outline: 1px solid black;
+    outline: 1px dashed black;
+}
+
+.cell-clicked {
+    background-color: rgb(157, 197, 199);
+    cursor: not-allowed;
 }
 
 .cell-bomb {
+    background-color: rgb(241, 117, 78);
     background-image: url('./images/bomb.png');
     background-size: contain;
+    cursor: not-allowed;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
 }
+
+/* # Game over */
 
 .end-game-screen {
     position: absolute;
@@ -79,6 +109,7 @@ h1 {
     font-size: 24px;
     font-family: 'Darker Grotesque', sans-serif;
     padding: 4px 20px 8px 20px;
+    /* width: 50%; */
     cursor: pointer;
     text-transform: uppercase;
     border: 2px solid rgb(0, 23, 50);
@@ -88,11 +119,8 @@ h1 {
     background-color: rgb(203, 224, 221);
 }
 
+/* # Utilities */
+
 .hidden {
     display: none;
-}
-
-.cell-clicked {
-    background-color: rgb(4, 76, 80);
-    cursor: not-allowed;
 }
