@@ -23,7 +23,7 @@ body {
     font-family: 'Darker Grotesque', sans-serif;
     line-height: 1;
     color: rgb(0, 23, 50);
-    background-color: rgb(216, 238, 232);
+    background-color: rgb(226, 120, 120);
     display: flex;
     justify-content: center;
 }
@@ -35,13 +35,18 @@ body {
 /* # Game Panel */
 
 h1 {
-    font-size: 40px;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
 }
 
 .score {
     display: flex;
     justify-content: space-between;
     font-size: 32px;
+    margin-bottom: 5px;
     /* font-weight: 700; */
 }
 
@@ -50,6 +55,7 @@ h1 {
 .game-board {
     border: 2px solid rgb(0, 23, 50);
     position: relative;
+    background-color: white;
 }
 
 .grid {
@@ -65,14 +71,19 @@ h1 {
     outline: 1px dashed black;
 }
 
+.cell:hover {
+    background-color: rgb(157, 197, 199);
+}
+
 .cell-clicked {
     background-color: rgb(157, 197, 199);
+    background-image: url('./images/flag.png');
     cursor: not-allowed;
 }
 
 .cell-bomb {
     background-color: rgb(241, 117, 78);
-    background-image: url('./images/bomb.png');
+    background-image: url('./images/bomb2.png');
     background-size: contain;
     cursor: not-allowed;
     /* background-position: center; */
@@ -87,7 +98,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(241, 117, 78, 0.7);
+    background-color: rgba(241, 117, 78, 0.55);
 
     align-items: center;
     justify-content: center;
@@ -98,7 +109,7 @@ h1 {
 }
 
 .win {
-    background-color: rgba(78, 241, 187, 0.7);
+    background-color: rgba(78, 241, 187, 0.55);
 }
 
 .end-game-text {
